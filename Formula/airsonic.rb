@@ -60,7 +60,7 @@ class Airsonic < Formula
         <key>WorkingDirectory</key>
         <string>#{workingdir}</string>
         <key>StandardErrorPath</key>
-        <string>#{var}/log/airsonic_error.log</string>
+        <string>#{var}/log/airsonic.log</string>
         <key>StandardOutPath</key>
         <string>#{var}/log/airsonic.log</string>
         <key>RunAtLoad</key>
