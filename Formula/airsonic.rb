@@ -36,7 +36,10 @@ class Airsonic < Formula
         <key>ProgramArguments</key>
         <array>
           <string>java</string>
+          <string>--add-modules=java.se.ee</string>
+          <string>-XX:+IgnoreUnrecognizedVMOptions</string>
           <string>-Xmx256m</string>
+          <string>-Dlogging.file=#{var}/log/airsonic.log</string>
           <string>-Dlogging.level.root=ERROR</string>
           <string>-Dserver.host=0.0.0.0</string>
           <string>-Dserver.port=4040</string>
@@ -57,7 +60,7 @@ class Airsonic < Formula
         <key>WorkingDirectory</key>
         <string>#{workingdir}</string>
         <key>StandardErrorPath</key>
-        <string>#{var}/log/airsonic-error.log</string>
+        <string>#{var}/log/airsonic_error.log</string>
         <key>StandardOutPath</key>
         <string>#{var}/log/airsonic.log</string>
         <key>RunAtLoad</key>
