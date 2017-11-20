@@ -46,14 +46,8 @@ class Airsonic < Formula
           <string>-Dlogging.level.root=ERROR</string>
           <string>-Dserver.host=0.0.0.0</string>
           <string>-Dserver.port=4040</string>
-          <string>-Dserver.contextPath=/</string>
+          <string>-Dserver.context-path=/</string>
           <string>-Dairsonic.home=#{workingdir}</string>
-          <string>-Dairsonic.host=0.0.0.0</string>
-          <string>-Dairsonic.port=4040</string>
-          <string>-Dairsonic.contextPath=/</string>
-          <string>-Dairsonic.defaultMusicFolder=~/Music/iTunes/iTunes Media/Music</string>
-          <string>-Dairsonic.defaultPodcastFolder=~/Music/iTunes/iTunes Media/Podcasts</string>
-          <string>-Dairsonic.defaultPlaylistFolder=~/Music/Playlists</string>
           <string>-Djava.awt.headless=true</string>
           <string>-jar</string>
           <string>#{prefix}/airsonic.war</string>
