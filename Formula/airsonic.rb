@@ -40,7 +40,7 @@ EOS
           <string>java</string>
           <string>--add-modules=java.se.ee</string>
           <string>-XX:+IgnoreUnrecognizedVMOptions</string>
-          <string>-Xmx256m</string>
+          <string>-Xmx512m</string>
           <string>-Dlogging.file=#{var}/log/airsonic.log</string>
           <string>-Dlogging.level.root=ERROR</string>
           <string>-Dserver.host=0.0.0.0</string>
