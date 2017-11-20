@@ -15,8 +15,9 @@ class Airsonic < Formula
 
   def post_install
     (var/"airsonic").mkpath
-    (var/"airsonic/airsonic.log").write <<~EOS
-EOS
+    unless (var/"airsonic/airsonic.log").exist?
+      (var/"airsonic/airsonic.log").write("")
+    end
     (var/"airsonic/transcode").mkpath
     (var/"airsonic/transcode").install_symlink HOMEBREW_PREFIX/"bin/ffmpeg"
     (var/"airsonic/transcode").install_symlink HOMEBREW_PREFIX/"bin/lame"
