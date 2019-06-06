@@ -1,9 +1,9 @@
 class Airsonic < Formula
   desc "Free and Open Source media streaming server (fork of Subsonic and Libresonic)"
   homepage "https://airsonic.github.io/docs/"
-  url "https://github.com/airsonic/airsonic/releases/download/v10.2.1/airsonic.war"
-  version "10.2.1"
-  sha256 "9bd4e9651df1a15278fb6414d011bd5a45c037857e84eaeb1375b26c717a5ebe"
+  url "https://github.com/airsonic/airsonic/releases/download/v10.4.0/airsonic.war"
+  version "10.4.0"
+  sha256 "0842a1fc4380cbe75e40dcb94e40332222b816514bd8ad250501d472210894d4"
 
   depends_on :java
   depends_on "ffmpeg" => ["with-fdk-aac"]
