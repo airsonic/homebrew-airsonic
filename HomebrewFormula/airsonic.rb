@@ -28,42 +28,42 @@ class Airsonic < Formula
   end
 
   def plist; <<-EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-        <key>Label</key>
-        <string>#{plist_name}</string>
-        <key>EnableGlobbing</key>
-        <true/>
-        <key>ProgramArguments</key>
-        <array>
-          <string>java</string>
-          <string>--add-modules=java.se.ee</string>
-          <string>-XX:+IgnoreUnrecognizedVMOptions</string>
-          <string>-Xmx512m</string>
-          <string>-Dlogging.file=#{var}/log/airsonic.log</string>
-          <string>-Dlogging.level.root=ERROR</string>
-          <string>-Dserver.host=0.0.0.0</string>
-          <string>-Dserver.port=4040</string>
-          <string>-Dserver.context-path=/</string>
-          <string>-Dairsonic.home=#{workingdir}</string>
-          <string>-Djava.awt.headless=true</string>
-          <string>-jar</string>
-          <string>#{prefix}/airsonic.war</string>
-        </array>
-        <key>ServiceDescription</key>
-        <string>#{name}</string>
-        <key>WorkingDirectory</key>
-        <string>#{workingdir}</string>
-        <key>StandardErrorPath</key>
-        <string>#{var}/log/airsonic.log</string>
-        <key>StandardOutPath</key>
-        <string>#{var}/log/airsonic.log</string>
-        <key>RunAtLoad</key>
-        <true/>
-      </dict>
-      </plist>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>#{plist_name}</string>
+  <key>EnableGlobbing</key>
+  <true/>
+  <key>ProgramArguments</key>
+  <array>
+    <string>java</string>
+    <string>--add-modules=java.se.ee</string>
+    <string>-XX:+IgnoreUnrecognizedVMOptions</string>
+    <string>-Xmx512m</string>
+    <string>-Dlogging.file=#{var}/log/airsonic.log</string>
+    <string>-Dlogging.level.root=ERROR</string>
+    <string>-Dserver.host=0.0.0.0</string>
+    <string>-Dserver.port=4040</string>
+    <string>-Dserver.context-path=/</string>
+    <string>-Dairsonic.home=#{workingdir}</string>
+    <string>-Djava.awt.headless=true</string>
+    <string>-jar</string>
+    <string>#{prefix}/airsonic.war</string>
+  </array>
+  <key>ServiceDescription</key>
+  <string>#{name}</string>
+  <key>WorkingDirectory</key>
+  <string>#{workingdir}</string>
+  <key>StandardErrorPath</key>
+  <string>#{var}/log/airsonic.log</string>
+  <key>StandardOutPath</key>
+  <string>#{var}/log/airsonic.log</string>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
     EOS
   end
 end
